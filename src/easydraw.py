@@ -21,16 +21,6 @@ class MainWindow(ctk.CTk):
         meta = self.config['DEFAULT']
         self.size = self.config['app.config']
 
-
-        """ TODO
-            When using WM, he title and some other features are not displayed. I don't know how it 
-            will look on other systems. After the first release we should add multi-system functionality
-            --------------------------------------------------------------------------------------------
-            При использовании WM не отображается название и некоторые другие функции. Не знаю как это 
-            будет выглядеть на других системах. После первого релиза надо добавить мультисистемность
-        """
-
-
         self.title(f"{meta['title']} {meta['version']}")
         self.geometry(f"{self.size['width']}x{self.size['height']}")
         
@@ -50,6 +40,17 @@ class MainWindow(ctk.CTk):
         # Create interaction menu
 
 
+
 if __name__ == '__main__':
     app = MainWindow()
     app.mainloop()
+
+""" TODO
+    1) Add tabview to main menu (fast switch canvas)
+    2) Create your own custom optionmenu widget 
+"""
+
+""" NOTE
+    1) When using WM, he title and some other features are not displayed. I don't know how it 
+    will look on other systems. After the first release we should add multi-system functionality
+"""
