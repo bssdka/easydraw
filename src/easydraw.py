@@ -8,7 +8,7 @@ import os
 #__License__: BSD 2-Clause License
 
 # ---GLOBAL VARIABLES---
-__path__ = os.getcwd() + '/src'
+__path__ = os.getcwd()
 
 
 class MainWindow(ctk.CTk):
@@ -17,7 +17,7 @@ class MainWindow(ctk.CTk):
 
         # Launch and read Config Parser 
         self.config = cfg.ConfigParser()
-        self.config.read(f"{__path__}/basic.ini")
+        self.config.read(f"{__path__}/config/basic.ini")
         meta = self.config['DEFAULT']
         self.size = self.config['app.config']
 
@@ -48,7 +48,7 @@ class MainWindow(ctk.CTk):
         main_menu = ctk.CTkCanvas(self, width=int(menuCFG['mm_width']), height=int(menuCFG['mm_height']), bg="#fff").place(x=331, y=20)
 
         # Create interaction menu
-        
+
 
 if __name__ == '__main__':
     app = MainWindow()
