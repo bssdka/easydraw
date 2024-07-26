@@ -38,7 +38,7 @@ class MainWindow(ctk.CTk):
         main_menu = ctk.CTkCanvas(self, width=int(menuCFG['mm_width']), height=int(menuCFG['mm_height']), bg="#fff").place(x=331, y=20)
 
         # Create interaction menu
-
+        
 
 
 if __name__ == '__main__':
